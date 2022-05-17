@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+<Node Id="IModel" Label="FoodStore_DbContext" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" PropertyAccessMode="PropertyAccessMode.Default" ProductVersion="6.0.4" Annotations="BaseTypeDiscoveryConvention:DerivedTypes: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.List`1[Microsoft.EntityFrameworkCore.Metadata.IConventionEntityType]]
+Relational:MaxIdentifierLength: 128
+RelationshipDiscoveryConvention:InverseNavigationCandidates: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.SortedSet`1[System.Type]]
+SqlServer:ValueGenerationStrategy: IdentityColumn" Category="Model" Group="Expanded" />
+<Node Id = "ChiTietDonHang" Label="ChiTietDonHang" Name="ChiTietDonHang" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:Schema:
+Relational:TableName: ChiTietDonHang
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "DanhMuc" Label="DanhMuc" Name="DanhMuc" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:Schema:
+Relational:TableName: DanhMuc
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "ChiTietDonHang.maDonHang" Label="maDonHang" Name="maDonHang" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "ChiTietDonHang.donHang_owner" Label="donHang_owner (1)" Name="donHang_owner" Category="Navigation Property" Type="DonHang"  Field="" Dependent="" Principal="DonHang" Inverse="list_chiTietDonHang" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "ChiTietDonHang.sanPham_owner" Label="sanPham_owner (1)" Name="sanPham_owner" Category="Navigation Property" Type="SanPham"  Field="" Dependent="" Principal="SanPham" Inverse="list_chiTietDonHang" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "ChiTietDonHang.maSanPham" Label="maSanPham" Name="maSanPham" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "ChiTietDonHang.soLuong" Label="soLuong" Name="soLuong" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "DonHang" Label="DonHang" Name="DonHang" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:Schema:
+Relational:TableName: DonHang
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "DanhMuc.maDanhMuc" Label="maDanhMuc" Name="maDanhMuc" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "DanhMuc.list_sanPham" Label="list_sanPham (*)" Name="list_sanPham" Category="Navigation Collection" Type="ICollection&lt;SanPham&gt;"  Field="" Dependent="SanPham" Principal="" Inverse="danhMuc_owner" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "DanhMuc.tenDanhMuc" Label="tenDanhMuc" Name="tenDanhMuc" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "GioHang" Label="GioHang" Name="GioHang" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:Schema:
+Relational:TableName: GioHang
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "DonHang.maDonHang" Label="maDonHang" Name="maDonHang" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "DonHang.list_chiTietDonHang" Label="list_chiTietDonHang (*)" Name="list_chiTietDonHang" Category="Navigation Collection" Type="ICollection&lt;ChiTietDonHang&gt;"  Field="" Dependent="ChiTietDonHang" Principal="" Inverse="donHang_owner" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "DonHang.taiKhoan_owner" Label="taiKhoan_owner (1)" Name="taiKhoan_owner" Category="Navigation Property" Type="TaiKhoan"  Field="" Dependent="" Principal="TaiKhoan" Inverse="list_donHang" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "DonHang.diaChi" Label="diaChi" Name="diaChi" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "DonHang.maGiamGia" Label="maGiamGia" Name="maGiamGia" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "DonHang.maTaiKhoan" Label="maTaiKhoan" Name="maTaiKhoan" Category="Property Foreign" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "DonHang.ngayLap" Label="ngayLap" Name="ngayLap" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: getdate()" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "DonHang.nguoiNhan" Label="nguoiNhan" Name="nguoiNhan" Category="Property Required" Type="string" MaxLength="(50)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "DonHang.trangThaiDonHang" Label="trangThaiDonHang" Name="trangThaiDonHang" Category="Property Required" Type="TrangThaiDonHang" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValue: choDuyet" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "PhieuGiamGia" Label="PhieuGiamGia" Name="PhieuGiamGia" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:Schema:
+Relational:TableName: PhieuGiamGia
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "GioHang.maTaiKhoan" Label="maTaiKhoan" Name="maTaiKhoan" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "GioHang.sanPham_owner" Label="sanPham_owner (1)" Name="sanPham_owner" Category="Navigation Property" Type="SanPham"  Field="" Dependent="" Principal="SanPham" Inverse="list_gioHang" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "GioHang.taiKhoan_owner" Label="taiKhoan_owner (1)" Name="taiKhoan_owner" Category="Navigation Property" Type="TaiKhoan"  Field="" Dependent="" Principal="TaiKhoan" Inverse="list_gioHang" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "GioHang.maSanPham" Label="maSanPham" Name="maSanPham" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "GioHang.soLuong" Label="soLuong" Name="soLuong" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "SanPham" Label="SanPham" Name="SanPham" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:Schema:
+Relational:TableName: SanPham
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "PhieuGiamGia.maPhieuGiamGia" Label="maPhieuGiamGia" Name="maPhieuGiamGia" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "PhieuGiamGia.maNhap" Label="maNhap" Name="maNhap" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PhieuGiamGia.ngayBatDau" Label="ngayBatDau" Name="ngayBatDau" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PhieuGiamGia.ngayKetThuc" Label="ngayKetThuc" Name="ngayKetThuc" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PhieuGiamGia.phanTramGiam" Label="phanTramGiam" Name="phanTramGiam" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PhieuGiamGia.soLuong" Label="soLuong" Name="soLuong" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "PhieuGiamGia.tenPhieuGiamGia" Label="tenPhieuGiamGia" Name="tenPhieuGiamGia" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "SanPhamYeuThich" Label="SanPhamYeuThich" Name="SanPhamYeuThich" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:Schema:
+Relational:TableName: SanPhamYeuThich
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "SanPham.maSanPham" Label="maSanPham" Name="maSanPham" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "SanPham.danhMuc_owner" Label="danhMuc_owner (1)" Name="danhMuc_owner" Category="Navigation Property" Type="DanhMuc"  Field="" Dependent="" Principal="DanhMuc" Inverse="list_sanPham" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "SanPham.list_chiTietDonHang" Label="list_chiTietDonHang (*)" Name="list_chiTietDonHang" Category="Navigation Collection" Type="ICollection&lt;ChiTietDonHang&gt;"  Field="" Dependent="ChiTietDonHang" Principal="" Inverse="sanPham_owner" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "SanPham.list_gioHang" Label="list_gioHang (*)" Name="list_gioHang" Category="Navigation Collection" Type="ICollection&lt;GioHang&gt;"  Field="" Dependent="GioHang" Principal="" Inverse="sanPham_owner" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "SanPham.list_sanPhamYeuThich" Label="list_sanPhamYeuThich (*)" Name="list_sanPhamYeuThich" Category="Navigation Collection" Type="ICollection&lt;SanPhamYeuThich&gt;"  Field="" Dependent="SanPhamYeuThich" Principal="" Inverse="sanPham_owner" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "SanPham.anhSanPham" Label="anhSanPham" Name="anhSanPham" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "SanPham.giaSanPham" Label="giaSanPham" Name="giaSanPham" Category="Property Required" Type="double" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "SanPham.maDanhMuc" Label="maDanhMuc" Name="maDanhMuc" Category="Property Foreign" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "SanPham.moTa" Label="moTa" Name="moTa" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "SanPham.soLuongTonKho" Label="soLuongTonKho" Name="soLuongTonKho" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "SanPham.tenSanPham" Label="tenSanPham" Name="tenSanPham" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "SanPham.trangThaiSanPham" Label="trangThaiSanPham" Name="trangThaiSanPham" Category="Property Required" Type="TrangThaiSanPham" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValue: dangMoBan" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "TaiKhoan" Label="TaiKhoan" Name="TaiKhoan" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:Schema:
+Relational:TableName: TaiKhoan
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "SanPhamYeuThich.maTaiKhoan" Label="maTaiKhoan" Name="maTaiKhoan" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "SanPhamYeuThich.sanPham_owner" Label="sanPham_owner (1)" Name="sanPham_owner" Category="Navigation Property" Type="SanPham"  Field="" Dependent="" Principal="SanPham" Inverse="list_sanPhamYeuThich" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "SanPhamYeuThich.taiKhoan_owner" Label="taiKhoan_owner (1)" Name="taiKhoan_owner" Category="Navigation Property" Type="TaiKhoan"  Field="" Dependent="" Principal="TaiKhoan" Inverse="list_sanPhamYeuThich" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "SanPhamYeuThich.maSanPham" Label="maSanPham" Name="maSanPham" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "TaiKhoan" Label="TaiKhoan" Name="TaiKhoan" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="" Category="EntityType" Group="Expanded" />
+<Node Id = "TaiKhoan.maTaiKhoan" Label="maTaiKhoan" Name="maTaiKhoan" Category="Property Primary" Type="Guid" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "TaiKhoan.list_donHang" Label="list_donHang (*)" Name="list_donHang" Category="Navigation Collection" Type="ICollection&lt;DonHang&gt;"  Field="" Dependent="DonHang" Principal="" Inverse="taiKhoan_owner" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "TaiKhoan.list_gioHang" Label="list_gioHang (*)" Name="list_gioHang" Category="Navigation Collection" Type="ICollection&lt;GioHang&gt;"  Field="" Dependent="GioHang" Principal="" Inverse="taiKhoan_owner" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "TaiKhoan.list_sanPhamYeuThich" Label="list_sanPhamYeuThich (*)" Name="list_sanPhamYeuThich" Category="Navigation Collection" Type="ICollection&lt;SanPhamYeuThich&gt;"  Field="" Dependent="SanPhamYeuThich" Principal="" Inverse="taiKhoan_owner" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "TaiKhoan.anhDaiDien" Label="anhDaiDien" Name="anhDaiDien" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "TaiKhoan.diaChi" Label="diaChi" Name="diaChi" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "TaiKhoan.email" Label="email" Name="email" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "TaiKhoan.hoVaTen" Label="hoVaTen" Name="hoVaTen" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "TaiKhoan.matKhau" Label="matKhau" Name="matKhau" Category="Property Required" Type="string" MaxLength="(30)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 30" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "TaiKhoan.ngaySinh" Label="ngaySinh" Name="ngaySinh" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnType: date" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "TaiKhoan.quyenTaiKhoan" Label="quyenTaiKhoan" Name="quyenTaiKhoan" Category="Property Required" Type="QuyenTaiKhoan" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "TaiKhoan.soDienThoai" Label="soDienThoai" Name="soDienThoai" Category="Property Required" Type="string" MaxLength="(20)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 20" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "TaiKhoan.tenTaiKhoan" Label="tenTaiKhoan" Name="tenTaiKhoan" Category="Property Required" Type="string" MaxLength="(30)" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 30" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "TaiKhoan.trangThai" Label="trangThai" Name="trangThai" Category="Property Required" Type="TrangThaiKhoa" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+<Link Source = "IModel" Target="ChiTietDonHang" Category="Contains" />
+<Link Source = "IModel" Target="DanhMuc" Category="Contains" />
+<Link Source = "ChiTietDonHang" Target="ChiTietDonHang.donHang_owner" Category="Contains" />
+<Link Source = "ChiTietDonHang" Target="ChiTietDonHang.sanPham_owner" Category="Contains" />
+<Link Source = "ChiTietDonHang" Target="ChiTietDonHang.maDonHang" Category="Contains" />
+<Link Source="ChiTietDonHang" Target="DonHang" From="ChiTietDonHang.maDonHang" To="DonHang.maDonHang" Name="ChiTietDonHang -> DonHang" Annotations="Relational:Name: FK_ChiTietDonHang_DonHang" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source="ChiTietDonHang" Target="SanPham" From="ChiTietDonHang.maSanPham" To="SanPham.maSanPham" Name="ChiTietDonHang -> SanPham" Annotations="Relational:Name: FK_ChiTietDonHang_SanPham" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "ChiTietDonHang" Target="ChiTietDonHang.maSanPham" Category="Contains" />
+<Link Source = "ChiTietDonHang" Target="ChiTietDonHang.soLuong" Category="Contains" />
+<Link Source = "IModel" Target="DonHang" Category="Contains" />
+<Link Source = "DanhMuc" Target="DanhMuc.list_sanPham" Category="Contains" />
+<Link Source = "DanhMuc" Target="DanhMuc.maDanhMuc" Category="Contains" />
+<Link Source = "DanhMuc" Target="DanhMuc.tenDanhMuc" Category="Contains" />
+<Link Source = "IModel" Target="GioHang" Category="Contains" />
+<Link Source = "DonHang" Target="DonHang.list_chiTietDonHang" Category="Contains" />
+<Link Source = "DonHang" Target="DonHang.taiKhoan_owner" Category="Contains" />
+<Link Source = "DonHang" Target="DonHang.maDonHang" Category="Contains" />
+<Link Source="DonHang" Target="TaiKhoan" From="DonHang.maTaiKhoan" To="TaiKhoan.maTaiKhoan" Name="DonHang -> TaiKhoan" Annotations="Relational:Name: FK_DonHang_TaiKhoan" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "DonHang" Target="DonHang.diaChi" Category="Contains" />
+<Link Source = "DonHang" Target="DonHang.maGiamGia" Category="Contains" />
+<Link Source = "DonHang" Target="DonHang.maTaiKhoan" Category="Contains" />
+<Link Source = "DonHang" Target="DonHang.ngayLap" Category="Contains" />
+<Link Source = "DonHang" Target="DonHang.nguoiNhan" Category="Contains" />
+<Link Source = "DonHang" Target="DonHang.trangThaiDonHang" Category="Contains" />
+<Link Source = "IModel" Target="PhieuGiamGia" Category="Contains" />
+<Link Source = "GioHang" Target="GioHang.sanPham_owner" Category="Contains" />
+<Link Source = "GioHang" Target="GioHang.taiKhoan_owner" Category="Contains" />
+<Link Source = "GioHang" Target="GioHang.maTaiKhoan" Category="Contains" />
+<Link Source="GioHang" Target="SanPham" From="GioHang.maSanPham" To="SanPham.maSanPham" Name="GioHang -> SanPham" Annotations="Relational:Name: FK_GioHang_SanPham" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source="GioHang" Target="TaiKhoan" From="GioHang.maTaiKhoan" To="TaiKhoan.maTaiKhoan" Name="GioHang -> TaiKhoan" Annotations="Relational:Name: FK_GioHang_TaiKhoan" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "GioHang" Target="GioHang.maSanPham" Category="Contains" />
+<Link Source = "GioHang" Target="GioHang.soLuong" Category="Contains" />
+<Link Source = "IModel" Target="SanPham" Category="Contains" />
+<Link Source = "PhieuGiamGia" Target="PhieuGiamGia.maPhieuGiamGia" Category="Contains" />
+<Link Source = "PhieuGiamGia" Target="PhieuGiamGia.maNhap" Category="Contains" />
+<Link Source = "PhieuGiamGia" Target="PhieuGiamGia.ngayBatDau" Category="Contains" />
+<Link Source = "PhieuGiamGia" Target="PhieuGiamGia.ngayKetThuc" Category="Contains" />
+<Link Source = "PhieuGiamGia" Target="PhieuGiamGia.phanTramGiam" Category="Contains" />
+<Link Source = "PhieuGiamGia" Target="PhieuGiamGia.soLuong" Category="Contains" />
+<Link Source = "PhieuGiamGia" Target="PhieuGiamGia.tenPhieuGiamGia" Category="Contains" />
+<Link Source = "IModel" Target="SanPhamYeuThich" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.danhMuc_owner" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.list_chiTietDonHang" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.list_gioHang" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.list_sanPhamYeuThich" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.maSanPham" Category="Contains" />
+<Link Source="SanPham" Target="DanhMuc" From="SanPham.maDanhMuc" To="DanhMuc.maDanhMuc" Name="SanPham -> DanhMuc" Annotations="Relational:Name: FK_SanPham_DanhMuc" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "SanPham" Target="SanPham.anhSanPham" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.giaSanPham" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.maDanhMuc" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.moTa" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.soLuongTonKho" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.tenSanPham" Category="Contains" />
+<Link Source = "SanPham" Target="SanPham.trangThaiSanPham" Category="Contains" />
+<Link Source = "IModel" Target="TaiKhoan" Category="Contains" />
+<Link Source = "SanPhamYeuThich" Target="SanPhamYeuThich.sanPham_owner" Category="Contains" />
+<Link Source = "SanPhamYeuThich" Target="SanPhamYeuThich.taiKhoan_owner" Category="Contains" />
+<Link Source = "SanPhamYeuThich" Target="SanPhamYeuThich.maTaiKhoan" Category="Contains" />
+<Link Source="SanPhamYeuThich" Target="SanPham" From="SanPhamYeuThich.maSanPham" To="SanPham.maSanPham" Name="SanPhamYeuThich -> SanPham" Annotations="Relational:Name: FK_SanPhamYeuThich_SanPham" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source="SanPhamYeuThich" Target="TaiKhoan" From="SanPhamYeuThich.maTaiKhoan" To="TaiKhoan.maTaiKhoan" Name="SanPhamYeuThich -> TaiKhoan" Annotations="Relational:Name: FK_SanPhamYeuThich_TaiKhoan" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "SanPhamYeuThich" Target="SanPhamYeuThich.maSanPham" Category="Contains" />
+<Link Source = "IModel" Target="TaiKhoan" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.list_donHang" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.list_gioHang" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.list_sanPhamYeuThich" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.maTaiKhoan" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.anhDaiDien" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.diaChi" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.email" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.hoVaTen" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.matKhau" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.ngaySinh" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.quyenTaiKhoan" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.soDienThoai" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.tenTaiKhoan" Category="Contains" />
+<Link Source = "TaiKhoan" Target="TaiKhoan.trangThai" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+  <Properties>
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="Field"  Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type"  Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />    
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass"  Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+  </Properties>
+</DirectedGraph>
